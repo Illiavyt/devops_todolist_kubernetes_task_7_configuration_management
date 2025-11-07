@@ -1,7 +1,7 @@
 # Створи ресурси у Kubernetes:
-kubectl apply -f configMap.yml
-kubectl apply -f secret.yml
-kubectl apply -f deployment.yml
+kubectl apply -f .infrastructure/configMap.yml
+kubectl apply -f .infrastructure/secret.yml
+kubectl apply -f .infrastructure/deployment.yml
 
 # Перевір створені ресурси
 kubectl get configmap
@@ -27,6 +27,6 @@ kubectl port-forward <pod-name> 8000:8000
 http://localhost:8000/
 
 # Очистка після перевірки
-kubectl delete -f deployment.yml
-kubectl delete -f configMap.yml
-kubectl delete -f secret.yml
+kubectl delete -f .infrastructure/deployment.yml
+kubectl delete -f .infrastructure/configMap.yml
+kubectl delete -f .infrastructure/secret.yml
